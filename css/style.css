@@ -1,0 +1,368 @@
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0b1 | 201101 
+    NOTE:WORK IN PROGRESS
+    USE WITH CAUTION AND TEST WITH ABANDON */
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+    display:block;
+}
+body{
+    line-height:1;
+}
+ol,ul{
+    list-style:none;
+}
+blockquote,q{
+    quotes:none;
+}
+blockquote:before,blockquote:after,
+q:before,q:after{
+    content:’’;
+    content:none;
+}
+/* remember to define visible focus styles! 
+:focus{
+    outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+    text-decoration:none;
+}
+del{
+    text-decoration:line-through;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/* GO! */
+html {
+    font-family: Museo Sans, Arial;
+    font-weight: 100;
+    font-size: 14px;
+}
+h1 {
+    font-size: 2.5em;
+}
+h4 {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #393f3f;
+    padding-bottom: 0.75em;
+}
+body {
+    color: #757979;
+    background-color: #f7fafb;
+    padding: 18px;
+}
+.clear {
+    clear: both;
+}
+
+.card-container {
+    width:320px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #eaebeb;
+    border-radius: 3px;
+    padding: 18px;
+    padding-bottom: 3px;
+    box-shadow: 0px 2px 2px -2px #e3e3e3;
+    transition: box-shadow .3s;
+}
+/*.card-container:hover {
+    box-shadow: 0px 6px 12px -6px rgba(0,0,0,.3);
+}*/
+.chart {
+    background-color: #efefef;
+    min-height: 100px;
+    padding: 18px;
+}
+.dataBlockBorder {
+    border: 1px solid blue;
+}
+.dataBlock {
+    width: 90%;
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.dataBox {
+    display: inline-block;
+}
+.vsTarget {
+}
+.progress {
+  position: relative;
+  left: -2%;
+}
+.rank {
+    float: right;
+}
+.vsIndicator {
+    float: left;
+    font-size: 1.3em;
+    font-weight: 500;
+
+}
+.progressScore {
+    float: left;
+    font-weight: 500;
+    line-height: .95em;
+    font-size: 1.75em;
+}
+.scoreLabel {
+    display: block;
+    font-size: .6em;
+    font-weight: 100;
+    line-height: 1em;
+}
+.scorePositive {
+    color: #77bc1f;
+}
+.scoreNeutral {}
+.scoreNegative {}
+.actionZone {
+    height: 24px;
+    font-size: .75em;
+    text-align: center;
+    cursor: pointer;
+    opacity: 1;
+}
+.actionZone2 {
+    height: 24px;
+    font-size: .75em;
+    text-align: center;
+    cursor: pointer;
+    opacity: 1;
+}
+.dotWrapper {
+    width: 24px;
+    height: 6px;
+    margin: auto;
+    /*margin-bottom: 9px;*/
+    position: relative;
+    top:  -6px;
+    left: 0px;
+}
+.grayDots {
+    position: relative;
+    opacity: 0;
+    z-index: 50;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.blueDots {
+    position: relative;
+    top: 11px;
+    left: 0px;
+    opacity: 0;
+    z-index: 100;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+}
+.rotate{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    position: relative;
+    top: 13px;
+    left: 0px;
+}
+.fadeIn {
+    opacity: 1;
+}
+.rotateGray {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transition: rotate .3s;
+    position: relative;
+    top: 2px;
+    left: 0px;
+    opacity: 1;
+}
+.active {
+    /*transform: rotate(0deg)*/
+}
+.innerContentWrapper{
+    height: 200px;
+    width: 100%;
+    display: none;
+    margin-bottom: 3px;
+    padding: 0px;
+    overflow: hidden;
+}
+.innerContent {
+    background-color: #efefef;
+    position: relative;
+    left: -320px;
+    height: 300px;
+    width: 320px;
+}
+#testShadow {
+    background-color: #acacac;
+    height: 70px;
+    width: 70px;
+    -webkit-filter: blur(3px);
+}
+
+/* SECOND CARD STYLES */
+
+.cardTop {
+    width:320px;
+    margin: auto;
+    margin-top: 3px;
+    background-color: #ffffff;
+    border: 1px solid #eaebeb;
+    /*border-bottom: none;*/
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 18px;
+    padding-bottom: 3px;
+    -webkit-box-shadow: 0px 3px 2px -1px rgba(240,240,240,1);
+    -moz-box-shadow:  0px 3px 2px -1px rgba(240,240,240,1);
+    box-shadow:  0px 3px 2px -1px rgba(240,240,240,1);
+    position: relative;
+    z-index: 100;
+
+}
+.cardBottom {
+    width:320px;
+    margin: auto;
+    background-color: #fefefe;
+    border: 1px solid #eaebeb;
+    border-top: none;-webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 18px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+#links {
+    font-size: 0.8em;
+    position:absolute;
+    top: 24px;
+    line-height: 1.6em;
+
+}
+/* * * * * * * * * * * */
+/* COMMENT CARD STYLES */
+/* * * * * * * * * * * */
+
+.commentCardContainer {
+    width:340px;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #eaebeb;
+    border-radius: 3px;
+    padding: 12px;
+    padding-bottom: 3px;
+    box-shadow: 0px 2px 2px -2px #e3e3e3;
+    transition: box-shadow .3s;
+}
+
+.cardHeaderWrapper {
+    width:80%; 
+    display: block; 
+    margin-bottom:9px
+}
+.source {
+    float:left;
+}
+.sourceLabel {
+    font-size: 1.1em;
+    position: relative;
+    top: -5px;
+}
+.reviewTime {
+    float: right;
+    font-size: .9em;
+    position: relative;
+    top: 3px;
+}
+.comment {
+    line-height: 1.3em;
+    color: #aebfbf;
+}
+.sbp {
+    font-weight: 500;
+    color: #3a4040;
+}
+.commentContainer {
+    float: left;
+    width: 93%;
+}
+.karat {
+    float: right;
+    width: 6%;
+    border-left: 1px solid red;
+}
+.expandedCommentWrapper {
+    height: 200px;
+    width: 100%;
+    display: none;
+    margin-bottom: 3px;
+    padding: 0px;
+    overflow: hidden;
+}

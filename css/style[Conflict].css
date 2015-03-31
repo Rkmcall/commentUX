@@ -1,0 +1,187 @@
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0b1 | 201101 
+    NOTE:WORK IN PROGRESS
+    USE WITH CAUTION AND TEST WITH ABANDON */
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+    display:block;
+}
+body{
+    line-height:1;
+}
+ol,ul{
+    list-style:none;
+}
+blockquote,q{
+    quotes:none;
+}
+blockquote:before,blockquote:after,
+q:before,q:after{
+    content:’’;
+    content:none;
+}
+/* remember to define visible focus styles! 
+:focus{
+    outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+    text-decoration:none;
+}
+del{
+    text-decoration:line-through;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/* GO! */
+html {
+    font-family: Museo Sans, Arial;
+    font-weight: 100;
+    font-size: 14px;
+}
+h1 {
+    font-size: 2.5em;
+}
+h4 {
+    font-size: 1.1em;
+    font-weight: 500;
+    padding-bottom: 0.75em;
+}
+body {
+    color: #717176;
+    background-color: #f7fafb;
+    padding: 18px;
+}
+.clear {
+    clear: both;
+}
+
+.card-container {
+    width:40%;
+    margin: auto;
+    background-color: #ffffff;
+    border: 1px solid #eaebeb;
+    border-radius: 3px;
+    padding: 18px;
+    padding-bottom: 6px;
+    box-shadow: 0;
+    transition: box-shadow .3s;
+}
+.card-container:hover {
+    box-shadow: 0px 6px 27px -7px rgba(0,0,0,0.5);
+}
+.chart {
+    background-color: #efefef;
+    min-height: 70px;
+    padding: 18px;
+}
+.dataBlockBorder {
+    border: 1px solid blue;
+}
+.dataBlock {
+    width: 90%;
+    margin: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.dataBox {
+    display: inline-block;
+}
+.vsTarget {
+}
+.progress {
+  position: relative;
+  left: -2%;
+}
+.rank {
+    float: right;
+}
+.vsIndicator {
+    float: left;
+    font-size: 1.3em;
+    font-weight: 500;
+
+}
+.progressScore {
+    float: left;
+    font-weight: 500;
+    line-height: .95em;
+    font-size: 1.75em;
+}
+.scoreLabel {
+    display: block;
+    font-size: .6em;
+    font-weight: 100;
+    line-height: 1em;
+}
+.scorePositive {
+    color: #77bc1f;
+}
+.scoreNeutral {}
+.scoreNegative {}
+.actionZone {
+    padding: 3px 18px;
+    font-size: .75em;
+    text-align: center;
+    cursor: pointer;
+    opacity: 1;
+}
+.actionZone img {
+    opacity: 1;
+}
+.dotWrapper {
+    width: 24px;
+    height: 6px;
+    margin: auto;
+    margin-bottom: 9px;
+}
+.grayDots {
+    position: relative;
+    top:  -11px;
+    left: 0px;
+    z-index: 100;
+}
+.blueDots {
+    z-index: 1;
+    opacity: 0;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	        <title>jQM Complex Demo</title>
+	<meta charset="utf-8">        <title>jQM Complex Demo</title>
+        <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=no; target-densityDpi=device-dpi"/>
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" /> 
+        <!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>-->
+        <script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>  
+
+        
+<script type="text/javascript">
+	$(document).on('taphold', '.ui-popup-tooltip', function(){ 
+    $('#popupInfo').find('p').html($(this).attr('data-massage'));
+    $('#popupInfo').popup("open",{positionTo: '#'+$(this).attr('id')});
+});
+</script>
+
+
+         
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+ <body>     
+        <div data-role="page" id="index" data-theme="a" >
+            <div data-role="header">
+                <h3>
+                    First Page
+                </h3>
+                <a href="#second" class="ui-btn-right">Next</a>
+            </div>
+            
+            <div data-role="content">
+                <a href="#" class="ui-btn ui-alt-icon ui-icon-info ui-btn-a ui-btn-inline ui-popup-tooltip" data-transition="pop" data-overlay-theme="b" data-position-to="origin" id="hold-me" data-massage="This is a dynamic tooltip massage">Hold me for tooltip</a>
+                <a href="#" class="ui-btn ui-alt-icon ui-icon-info ui-btn-a ui-btn-inline ui-popup-tooltip" data-transition="pop" data-overlay-theme="b" data-position-to="origin" id="hold-me2" data-massage="This is a second dynamic tooltip massage">Hold me for second tooltip</a>                
+                <div data-role="popup" id="popupInfo" data-theme="b" style="max-width:350px;">
+                    <p>This is tooltip</p>
+                </div>
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                
+            </div>
+        </div> 
+
+
+    </body>
+
+</html>
